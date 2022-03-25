@@ -24,7 +24,7 @@ const retrieveContract = async () => {
       };
       const response = await fetchNoRetry(url, options);
       fs.writeFileSync(
-        `${basePath}/build/contract/_deployContractResponse.json`,
+        `${basePath}/build/contract/_contract.json`,
         JSON.stringify(response, null, 2)
       );
       if (response.response === "OK" && response.error === null) {
